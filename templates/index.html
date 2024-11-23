@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Species Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+<div class="container">
+    <h1>Upload an Audio File for Animal Species Prediction</h1>
+    <form action="/predict" method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" accept=".wav" required>
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if predicted_species %}
+    <div class="result">
+        <h3>Species Detected: {{ predicted_species }}</h3>
+        <p>Confidence: {{ confidence * 100 }}%</p>
+        <!-- <p>Mean Frequency: {{ mean_frequency }}</p> -->
+        <p>Status: {{ distress_status }}</p>
+    </div>
+    {% elif error %}
+    <div class="error">
+        <p>{{ error }}</p>
+    </div>
+    {% endif %}
+</div>
+</body>
+</html>

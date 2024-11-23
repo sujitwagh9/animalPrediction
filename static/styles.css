@@ -1,0 +1,81 @@
+/* Base reset for a clean slate */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: whitesmoke;
+    color: #000;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 40px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #001161;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+input[type="file"] {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #19a400;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 10px;
+}
+
+button:hover {
+    background-color: #008a2c;
+}
+
+.result, .error {
+    margin-top: 20px;
+    font-size: 1rem;
+}
+
+.result h3 {
+    font-size: 1.5rem;
+    color: #001161;
+}
+
+.error p {
+    color: #ff6347;
+    font-size: 1rem;
+}
